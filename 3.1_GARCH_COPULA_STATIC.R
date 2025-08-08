@@ -153,7 +153,7 @@ VaR95_MC_JOE_static <- VaR95_MC_JOE_static[1:1110]
 
 # Results saving
 
-results_dir2 <- file.path("data", "GARCH_COPULA (Static approach)")
+results_dir2 <- file.path("data", "GARCH_COPULA STATIC")
 if (!dir.exists(results_dir2)) {
   dir.create(results_dir2, recursive = TRUE)
 }
@@ -412,6 +412,7 @@ Lopez99_static <- c(
   lopez99_JOE_static
 )
 
+# Table 99%
 tableVaR99_static <- data.frame(
   Model = copula_names_final,
   ExpVio99 = ExpVio99_static,

@@ -112,7 +112,6 @@ results_base <- parLapply(cl, test_indices, function(i) {
       logrets <- mapply(simulate_logreturns, fits, as.data.frame(U), SIMPLIFY = FALSE)
       cbind(exp(do.call(cbind, logrets)) - 1)
     }
-    
 
     
     # Generate simulated returns
@@ -208,7 +207,7 @@ nrow(copula_param_df_t)
 nrow(X_test)
 
 # Savings results
-results_dir <- file.path("Data", "results GARCH_COPULA CLASSIC")
+results_dir <- file.path("Data", "results GARCH_COPULA DYNAMIC")
 if (!dir.exists(results_dir)) {
   dir.create(results_dir, recursive = TRUE)
 }
@@ -406,7 +405,7 @@ Lopez95 <- c(
   lopez95_JOE
 )
 
-# Tabella finale 95%
+# Final Table 95%
 tableVaR95 <- data.frame(
   Model = copula_names_final,
   ExpVio95 = ExpVio95,
@@ -417,7 +416,7 @@ tableVaR95 <- data.frame(
   Lopez95 = round(Lopez95, 5)*(100/ActVio95)
 )
 
-# === Livello 99% ===
+# === Level 99% ===
 ExpVio99 <- c(
   test99_GAUSS$expected.exceed,
   test99_T$expected.exceed,
@@ -483,7 +482,7 @@ Lopez99 <- c(
   lopez99_JOE
 )
 
-# Tabella finale 99%
+# Final Table 99%
 tableVaR99 <- data.frame(
   Model = copula_names_final,
   ExpVio99 = ExpVio99,

@@ -43,10 +43,13 @@
 # The entire algorithm is parallelized to improve computational efficiency.
 # ==============================================================================
 
+setwd("C:/Users/giuse/OneDrive/Desktop/Preparazione tesi/Thesis Code")
+
+
 # Import the dataframes of the three best specifications (epsilon-bins)
-sinkhorn_simulations_TOP_1 <- read.csv("C:/Users/giuse/OneDrive/Desktop/Preparazione tesi/Thesis Code/OT Algorithm definitive/sinkhorn_simulations_TOP1.csv")
-sinkhorn_simulations_TOP_2 <- read.csv("C:/Users/giuse/OneDrive/Desktop/Preparazione tesi/Thesis Code/OT Algorithm definitive/sinkhorn_simulations_TOP2.csv")
-sinkhorn_simulations_TOP_3 <- read.csv("C:/Users/giuse/OneDrive/Desktop/Preparazione tesi/Thesis Code/OT Algorithm definitive/sinkhorn_simulations_TOP3.csv")
+sinkhorn_simulations_TOP_1 <- read.csv("OT Algorithm definitive/sinkhorn_simulations_TOP1.csv")
+sinkhorn_simulations_TOP_2 <- read.csv("OT Algorithm definitive/sinkhorn_simulations_TOP2.csv")
+sinkhorn_simulations_TOP_3 <- read.csv("OT Algorithm definitive/sinkhorn_simulations_TOP3.csv")
 
 sim_list <- list(
   OT_model_1 = sinkhorn_simulations_TOP_1,  
@@ -322,14 +325,14 @@ results_OT <- parLapply(cl, test_indices, function(i) {
     sim_logrets_TOP1 <- cbind(logrets_TOP1_ITA, logrets_TOP1_GER, logrets_TOP1_FRA, logrets_TOP1_SPA)
     sim_logrets_TOP2 <- cbind(logrets_TOP2_ITA, logrets_TOP2_GER, logrets_TOP2_FRA, logrets_TOP2_SPA)
     sim_logrets_TOP3 <- cbind(logrets_TOP3_ITA, logrets_TOP3_GER, logrets_TOP3_FRA, logrets_TOP3_SPA)
-
-    sim_logrets_pl_TOP1 <- sim_logrets_TOP1 %*% omega
-    sim_logrets_pl_TOP2 <- sim_logrets_TOP3 %*% omega
-    sim_logrets_pl_TOP3 <- sim_logrets_TOP3 %*% omega
     
-    sim_rets_pl_TOP1 <- exp(sim_logrets_pl_TOP1) - 1
-    sim_rets_pl_TOP2 <- exp(sim_logrets_pl_TOP2) - 1
-    sim_rets_pl_TOP3 <- exp(sim_logrets_pl_TOP3) - 1
+    sim_rets_TOP1 <- exp(sim_logrets_TOP1) - 1
+    sim_rets_TOP2 <- exp(sim_logrets_TOP2) - 1
+    sim_rets_TOP3 <- exp(sim_logrets_TOP3) - 1
+
+    sim_rets_pl_TOP1 <- sim_rets_TOP1 %*% omega
+    sim_rets_pl_TOP2 <- sim_rets_TOP2 %*% omega
+    sim_rets_pl_TOP3 <- sim_rets_TOP3 %*% omega
     message("Step 9: Portfolio returns OK")
     
     list(
@@ -371,7 +374,7 @@ VaR99_OT_TOP3 <- VaR99_OT_TOP3[1:1110]
 
 
 # Save results
-results_dir4 <- file.path("data", "results OPTIMAL TRANSPORT COMPARED")
+results_dir4 <- file.path("data", "results OPTIMAL TRANSPORT")
 if (!dir.exists(results_dir4)) {
   dir.create(results_dir4, recursive = TRUE)
 }
