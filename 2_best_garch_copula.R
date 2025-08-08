@@ -341,14 +341,14 @@ lambda_table_arch <- data.frame(
 # ------------------------------- VISUAL INSPECTION for BEST COPULA ----------------------------------------
 
 
-# Pseudo-osservazioni
+# Pseudo-observation
 df_pit <- as.data.frame(U_matrix)
 colnames(df_pit) <- c("FTSEMIB", "DAX", "CAC", "IBEX")
 
-# Crea tutte le combinazioni di coppie
+# Create the couples combination
 pair_names <- combn(colnames(df_pit), 2, simplify = FALSE)
 
-# Funzione per creare un pannello per ciascuna coppia
+# Create a panel for each couple
 make_plot <- function(var1, var2, data) {
   tau_val <- round(cor(data[[var1]], data[[var2]], method = "kendall"), 3)
   
@@ -383,7 +383,7 @@ ggsave(
 # SIMULATIONS FROM FITTED COPULAS vs REAL MARGINS (STANDARDIZED RESIDUALS PITs)
 index_labels <- c("ITA" = "FTSEMIB", "GER" = "DAX", "FRA" = "CAC", "SPA" = "IBEX")
 
-# Copule fittate
+#  fitted copulas
 copula_list <- list(
   Gaussian = fit.gaussCopula@copula,
   t        = fit.tCopula@copula,
@@ -397,10 +397,10 @@ series_names <- colnames(U_matrix)
 pair_names <- combn(series_names, 2, simplify = FALSE)
 pair_labels <- sapply(pair_names, function(pair) paste(index_labels[pair[1]], "vs", index_labels[pair[2]]))
 
-# Contenitore 6x6 per tutti i grafici
+# # matrix creation
 all_plot_matrix <- matrix(list(), nrow = length(copula_list), ncol = length(pair_names))
 
-# Riempimento matrice
+# Fill the matrix
 copula_names <- names(copula_list)
 for (r in seq_along(copula_names)) {
   cop_name <- copula_names[r]
