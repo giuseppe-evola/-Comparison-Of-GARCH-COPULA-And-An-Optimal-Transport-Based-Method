@@ -35,7 +35,7 @@ MATLAB is used for the application of the Optimal Transport (OT) for the Depende
    "grid","knitr","kableExtra"
  ))
  ```
- ---
+ 
  ### MATLAB Environment  
  **Version**: MATLAB R2018b or later (recommended ≥ R2022a)  
  **Required Toolbox**: Statistics and Machine Learning Toolbox  
