@@ -1,6 +1,6 @@
 # Comparison Of GARCH-Copula And An Optimal Transport-Based Method
 
-This repository contains the code, data, and materials related to my master's thesis in Finance, completed as part of the Double Degree program between the University of Pavia (Italy) and HEC Liège (Belgium).
+This repository contains the code, data, and materials related to my master's thesis in Finance. I am pursuing my degree within the Double Degree program between the University of Pavia (Italy) and HEC Liège (Belgium).
 
 ## Abstract
 [Insert here the full abstract of your thesis.]
