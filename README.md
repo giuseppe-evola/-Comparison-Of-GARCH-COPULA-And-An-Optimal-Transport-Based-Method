@@ -85,7 +85,7 @@ The project is organized into four main sections:
 
 ---
 
-## **How to Replicate the Results**
+## **How to Reproduce the Analysis**
 
 A `.RData` file containing all variables and results is included in the repository, allowing you to quickly reproduce the thesis outcomes without re-running the entire pipeline.
 
