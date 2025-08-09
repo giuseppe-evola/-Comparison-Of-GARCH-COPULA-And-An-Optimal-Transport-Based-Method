@@ -10,26 +10,36 @@ This repository contains the code, data, and materials related to my master's th
 - **Provider**: Investing.com.  
 - **Frequency**: Daily observations, adjusted for corporate actions (splits, dividends).  
 
-# Installation & Requirements
+## Installation & Requirements
 
-## R Environment
-- **R** (Version >= 4.4.2)
+This project uses both **R** and **MATLAB**.  
+R is used for the GARCH-Copula modelling, backtesting, and results analysis.  
+MATLAB is used for the Optimal Transport (OT) approach with the 4D Sinkhorn algorithm.
 
-### Required R Packages
-The following R packages are required for the analysis:
+---
 
-`dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`, `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`, `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`, `ggcorrplot`, `grid`, `knitr`, `kableExtra`
+### R Environment
+- **Version**: R (≥ 4.4.2)  
+- **Required packages**:  
+  `dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`,  
+  `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`,  
+  `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`,  
+  `ggcorrplot`, `grid`, `knitr`, `kableExtra`
 
-### Installation
-To install all dependencies at once, run the following command in R:
-
+To install all R dependencies at once:
 ```r
 install.packages(c(
- "dplyr", "ggplot2", "xts", "tidyr", "moments", "tseries", "forecast", "MASS",
- "copula", "rugarch", "nortest", "fitdistrplus", "stats", "FinTS", "GGally",
- "gridExtra", "profvis", "parallel", "patchwork", "zoo", "tidyverse", "ggcorrplot",
- "grid", "knitr", "kableExtra"
+  "dplyr","ggplot2","xts","tidyr","moments","tseries","forecast","MASS",
+  "copula","rugarch","nortest","fitdistrplus","stats","FinTS","GGally",
+  "gridExtra","profvis","parallel","patchwork","zoo","tidyverse","ggcorrplot",
+  "grid","knitr","kableExtra"
 ))
+
+### MATLAB Environment
+- **Version**: MATLAB R2018b or later (recommended ≥ R2022a)  
+- **Required Toolbox**: Statistics and Machine Learning Toolbox  
+  (needed for `randsample`, `corr('type','Kendall')`, `skewness`, and `kurtosis`)
+
 
 
 
