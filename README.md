@@ -16,33 +16,20 @@ This project uses both **R** and **MATLAB**.
 R is used for the GARCH and Copula models definition and GARCH-Copula and GARCH-OT modelling for VaR estimation.  
 MATLAB is used for the application of the Optimal Transport-based model.
 
+### R Environment  
+**Version**: R (≥ 4.4.2)  
+**Required packages**:  
+`dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`,  
+`copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`,  
+`gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`,  
+`ggcorrplot`, `grid`, `knitr`, `kableExtra`  
 
+### MATLAB Environment  
+**Version**: MATLAB R2018b or later (recommended ≥ R2022a)  
+**Required Toolbox**: Statistics and Machine Learning Toolbox  
+(needed for `randsample`, `corr('type','Kendall')`, `skewness`, and `kurtosis`)
 
- ### R Environment  
- **Version**: R (≥ 4.4.2)  
- **Required packages**:  
- `dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`,  
- `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`,  
- `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`,  
- `ggcorrplot`, `grid`, `knitr`, `kableExtra`  
-  
- **To install all R dependencies at once:**  
- ```r
- install.packages(c(
-   "dplyr","ggplot2","xts","tidyr","moments","tseries","forecast","MASS",
-   "copula","rugarch","nortest","fitdistrplus","stats","FinTS","GGally",
-   "gridExtra","profvis","parallel","patchwork","zoo","tidyverse","ggcorrplot",
-   "grid","knitr","kableExtra"
- ))
- ```
- 
- ### MATLAB Environment  
- **Version**: MATLAB R2018b or later (recommended ≥ R2022a)  
- **Required Toolbox**: Statistics and Machine Learning Toolbox  
- (needed for `randsample`, `corr('type','Kendall')`, `skewness`, and `kurtosis`)
-
-
-
+---
 
 ## **Project Structure**
 
@@ -50,38 +37,38 @@ The project is organized into four main sections:
 
 ### **1. Preliminary Analysis**
 - **`1_preliminary_analysis.R`**  
- Splits the dataset into training and test sets, computes descriptive statistics, and highlights the stylized facts observed in the analyzed time series.
+  Splits the dataset into training and test sets, computes descriptive statistics, and highlights the stylized facts observed in the analyzed time series.
 
 ### **2. Model Selection and Functions**
 - **`Functions.R`**  
- Contains all custom functions used across the project, including model selection procedures and transformation tools.
+  Contains all custom functions used across the project, including model selection procedures and transformation tools.
 - **`2_best_garch_copula.R`**  
- - **Part 1**: Identifies the optimal ARMA-GARCH model for each stock index.  
- - **Part 2**: Performs a preliminary analysis of the best copula based on standardized residuals.
+  - **Part 1**: Identifies the optimal ARMA-GARCH model for each stock index.  
+  - **Part 2**: Performs a preliminary analysis of the best copula based on standardized residuals.
 
 ### **3. GARCH-Copula Approach**
 - **`3.1_GARCH_COPULA_DYNAMIC.R`**  
- Implements the rolling-window GARCH-Copula algorithm with dynamic refitting for VaR estimation. Parallelization is used to improve computational efficiency. Includes visualizations of the time evolution of both marginal and copula parameters.
+  Implements the rolling-window GARCH-Copula algorithm with dynamic refitting for VaR estimation. Parallelization is used to improve computational efficiency. Includes visualizations of the time evolution of both marginal and copula parameters.
 - **`3.1_GARCH_COPULA_STATIC.R`**  
- Implements the static GARCH-Copula approach, where copula models are estimated only on the training set and applied to all rolling windows.
+  Implements the static GARCH-Copula approach, where copula models are estimated only on the training set and applied to all rolling windows.
 
 ### **4. GARCH-OT (MATLAB + R)**
 
 **In the `OT Algorithm definitive` directory:**
 - **`sinkhorn_mot_4.m`** (MATLAB)  
- Core implementation of the regularized multimarginal Optimal Transport algorithm using the Sinkhorn method.
+  Core implementation of the regularized multimarginal Optimal Transport algorithm using the Sinkhorn method.
 - **`algo_parameters_test.m`** (MATLAB)  
- Executes the Sinkhorn algorithm across 16 different hyperparameter combinations (ε, n) and selects the top 3 using a custom selection procedure.
+  Executes the Sinkhorn algorithm across 16 different hyperparameter combinations (ε, n) and selects the top 3 using a custom selection procedure.
 - **`ToBeUsed.m`** (MATLAB)  
- Main script that generates the OT-based simulations (three 100000x4 datasets) from the top three selected specifications (ε, n).
+  Main script that generates the OT-based simulations (three 100000x4 datasets) from the top three selected specifications (ε, n).
 
 **In the main directory:**
 - **`4_GARCH_OT.R`**  
- Loads the top three OT-based simulations and applies the GARCH-OT algorithm to estimate the VaR. **Note**: these simulations are of standardized residuals, unlike copula-based approaches which use pseudo-observations.
+  Loads the top three OT-based simulations and applies the GARCH-OT algorithm to estimate the VaR. **Note**: these simulations are of standardized residuals, unlike copula-based approaches which use pseudo-observations.
 
 ### **Other**
 - **`other.R`**  
- Contains auxiliary scripts used throughout the thesis.
+  Contains auxiliary scripts used throughout the thesis.
 
 ---
 
@@ -111,3 +98,25 @@ This will produce three CSV files containing OT-based simulations for the top th
 
 **b.** Run **`4_GARCH_OT.R`** in the main directory.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+**To install all R dependencies at once:**  
+ ```r
+ install.packages(c(
+   "dplyr","ggplot2","xts","tidyr","moments","tseries","forecast","MASS",
+   "copula","rugarch","nortest","fitdistrplus","stats","FinTS","GGally",
+   "gridExtra","profvis","parallel","patchwork","zoo","tidyverse","ggcorrplot",
+   "grid","knitr","kableExtra"
+ ))
+ ```
