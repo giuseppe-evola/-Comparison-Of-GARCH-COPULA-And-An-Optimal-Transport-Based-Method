@@ -11,7 +11,7 @@ This repository contains the code, data, and materials related to my master's th
 - **Frequency**: Daily observations, adjusted for corporate actions (splits, dividends).  
 
 ## Installation & Requirements
-- **Programming language**: R (version ≥ 4.3.0)  
+- **Programming language**: R (version ≥ 4.4.2) 
 - **Required packages**:  
 `dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`, `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`, `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`, `ggcorrplot`, `grid`, `knitr`, `kableExtra`
 
