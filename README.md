@@ -10,18 +10,29 @@ This repository contains the code, data, and materials related to my master's th
 - **Provider**: Investing.com.  
 - **Frequency**: Daily observations, adjusted for corporate actions (splits, dividends).  
 
-## Installation & Requirements
-- **Programming language**: R (version ≥ 4.4.2) 
-- **Required packages**:  
+# Installation & Requirements
+
+## R Environment
+- **R** (Version >= 4.4.2)
+
+### Required R Packages
+The following R packages are required for the analysis:
+
 `dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`, `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`, `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`, `ggcorrplot`, `grid`, `knitr`, `kableExtra`
 
+### Installation
+To install all dependencies at once, run the following command in R:
 
-
-To install all dependencies at once, run:
 ```r
 install.packages(c(
-  "dplyr","ggplot2","xts","tidyr","moments","tseries","forecast","MASS",
-  "copula","rugarch","nortest","fitdistrplus","stats","FinTS","GGally",
-  "gridExtra","profvis","parallel","patchwork","zoo","tidyverse","ggcorrplot",
-  "grid","knitr","kableExtra"
+ "dplyr", "ggplot2", "xts", "tidyr", "moments", "tseries", "forecast", "MASS",
+ "copula", "rugarch", "nortest", "fitdistrplus", "stats", "FinTS", "GGally",
+ "gridExtra", "profvis", "parallel", "patchwork", "zoo", "tidyverse", "ggcorrplot",
+ "grid", "knitr", "kableExtra"
 ))
+
+
+
+## Project Structure
+The repository is organized as follows:
+
