@@ -13,32 +13,33 @@ This repository contains the code, data, and materials related to my master's th
 ## Installation & Requirements
 
 This project uses both **R** and **MATLAB**.  
-R is used for the GARCH-Copula modelling, backtesting, and results analysis.  
-MATLAB is used for the Optimal Transport (OT) approach with the 4D Sinkhorn algorithm.
+R is used for the GARCH and Copula models definition and GARCH-Copula and GARCH-OT modelling for VaR estimation.  
+MATLAB is used for the application of the Optimal Transport (OT) for the Dependence structure modelling.
 
 ---
 
-### R Environment
-- **Version**: R (≥ 4.4.2)  
-- **Required packages**:  
-  `dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`,  
-  `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`,  
-  `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`,  
-  `ggcorrplot`, `grid`, `knitr`, `kableExtra`
-
-To install all R dependencies at once:
-```r
-install.packages(c(
-  "dplyr","ggplot2","xts","tidyr","moments","tseries","forecast","MASS",
-  "copula","rugarch","nortest","fitdistrplus","stats","FinTS","GGally",
-  "gridExtra","profvis","parallel","patchwork","zoo","tidyverse","ggcorrplot",
-  "grid","knitr","kableExtra"
-))
-
-### MATLAB Environment
-- **Version**: MATLAB R2018b or later (recommended ≥ R2022a)  
-- **Required Toolbox**: Statistics and Machine Learning Toolbox  
-  (needed for `randsample`, `corr('type','Kendall')`, `skewness`, and `kurtosis`)
+ ### R Environment  
+> **Version**: R (≥ 4.4.2)  
+> **Required packages**:  
+> `dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`,  
+> `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`,  
+> `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`,  
+> `ggcorrplot`, `grid`, `knitr`, `kableExtra`  
+>  
+> **To install all R dependencies at once:**  
+> ```r
+> install.packages(c(
+>   "dplyr","ggplot2","xts","tidyr","moments","tseries","forecast","MASS",
+>   "copula","rugarch","nortest","fitdistrplus","stats","FinTS","GGally",
+>   "gridExtra","profvis","parallel","patchwork","zoo","tidyverse","ggcorrplot",
+>   "grid","knitr","kableExtra"
+> ))
+> ```
+> ---
+> ### MATLAB Environment  
+> **Version**: MATLAB R2018b or later (recommended ≥ R2022a)  
+> **Required Toolbox**: Statistics and Machine Learning Toolbox  
+> (needed for `randsample`, `corr('type','Kendall')`, `skewness`, and `kurtosis`)
 
 
 
