@@ -15,11 +15,14 @@ This repository contains the code, data, and materials related to my master's th
 - **Required packages**:  
 - dplyr, ggplot2, xts, tidyr, moments, tseries, forecast, MASS, copula, rugarch, nortest, fitdistrplus, stats, FinTS, GGally, gridExtra, profvis, parallel, patchwork, zoo, tidyverse, ggcorrplot, grid, knitr, kableExtra
 
-
-
-
-
-Chiedi a ChatGPT
+  - `parallel`  
+  - `patchwork`  
+  - `zoo`  
+  - `tidyverse`  
+  - `ggcorrplot`  
+  - `grid`  
+  - `knitr`  
+  - `kableExtra` 
 
 To install all dependencies at once, run:
 ```r
