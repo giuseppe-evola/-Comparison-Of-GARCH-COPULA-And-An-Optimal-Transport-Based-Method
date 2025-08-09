@@ -19,27 +19,27 @@ MATLAB is used for the application of the Optimal Transport (OT) for the Depende
 ---
 
  ### R Environment  
-> **Version**: R (≥ 4.4.2)  
-> **Required packages**:  
-> `dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`,  
-> `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`,  
-> `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`,  
-> `ggcorrplot`, `grid`, `knitr`, `kableExtra`  
->  
-> **To install all R dependencies at once:**  
-> ```r
-> install.packages(c(
->   "dplyr","ggplot2","xts","tidyr","moments","tseries","forecast","MASS",
->   "copula","rugarch","nortest","fitdistrplus","stats","FinTS","GGally",
->   "gridExtra","profvis","parallel","patchwork","zoo","tidyverse","ggcorrplot",
->   "grid","knitr","kableExtra"
-> ))
-> ```
-> ---
-> ### MATLAB Environment  
-> **Version**: MATLAB R2018b or later (recommended ≥ R2022a)  
-> **Required Toolbox**: Statistics and Machine Learning Toolbox  
-> (needed for `randsample`, `corr('type','Kendall')`, `skewness`, and `kurtosis`)
+ **Version**: R (≥ 4.4.2)  
+ **Required packages**:  
+ `dplyr`, `ggplot2`, `xts`, `tidyr`, `moments`, `tseries`, `forecast`, `MASS`,  
+ `copula`, `rugarch`, `nortest`, `fitdistrplus`, `stats`, `FinTS`, `GGally`,  
+ `gridExtra`, `profvis`, `parallel`, `patchwork`, `zoo`, `tidyverse`,  
+ `ggcorrplot`, `grid`, `knitr`, `kableExtra`  
+  
+ **To install all R dependencies at once:**  
+ ```r
+ install.packages(c(
+   "dplyr","ggplot2","xts","tidyr","moments","tseries","forecast","MASS",
+   "copula","rugarch","nortest","fitdistrplus","stats","FinTS","GGally",
+   "gridExtra","profvis","parallel","patchwork","zoo","tidyverse","ggcorrplot",
+   "grid","knitr","kableExtra"
+ ))
+ ```
+ ---
+ ### MATLAB Environment  
+ **Version**: MATLAB R2018b or later (recommended ≥ R2022a)  
+ **Required Toolbox**: Statistics and Machine Learning Toolbox  
+ (needed for `randsample`, `corr('type','Kendall')`, `skewness`, and `kurtosis`)
 
 
 
