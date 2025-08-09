@@ -16,7 +16,7 @@ This project uses both **R** and **MATLAB**.
 R is used for the GARCH and Copula models definition and GARCH-Copula and GARCH-OT modelling for VaR estimation.  
 MATLAB is used for the application of the Optimal Transport (OT) for the Dependence structure modelling.
 
----
+
 
  ### R Environment  
  **Version**: R (≥ 4.4.2)  
