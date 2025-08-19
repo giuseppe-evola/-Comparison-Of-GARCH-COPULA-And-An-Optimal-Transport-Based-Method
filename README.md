@@ -90,7 +90,7 @@ If you want to execute the full analysis from scratch, follow these steps:
 
 **0.** Download the entire repository and set your working directory.
 
-**1.** Run **`1_preliminary_analysis.R`**.
+**1.** Run **`1_preliminary_analysis.R`** and **`Functions.R`**
 
 **2.** Run **`2_best_garch_copula.R`**.  
 This script will export the standardized residuals obtained using the selected GARCH models on the training set. The output must be manually moved into the `OT Algorithm definitive` directory (a placeholder file is already present there). This choice is intentional to maintain full control over the file, although automatic saving could be implemented by modifying the output path.
