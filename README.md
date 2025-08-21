@@ -3,7 +3,29 @@
 This repository contains the code, data, and materials related to my master's thesis in Finance. I am pursuing my degree within the Double Degree program between the University of Pavia (Italy) and HEC Liège (Belgium).
 
 ## Abstract
-[Insert here the full abstract of your thesis.]
+Accurately estimating the Value at Risk (VaR) constitutes a central challenge both in
+the academic literature and in financial practice. When the problem is analyzed from
+a multivariate perspective, the main difficulty lies in appropriately capturing the depen-
+dence structure among different assets. This thesis investigates, following an agnostic
+approach, two alternative methods to address this problem in the context of portfolio mul-
+tivariate VaR estimation, both based on GARCH-type models to describe the univariate
+dynamics of the asset returns. The first approach, of parametric nature, relies on cop-
+ula functions (GARCH-Copula approach); the second constitutes the innovative aspect of
+this work, exploiting Optimal Transport theory to model dependence in a non-parametric
+way, thus leading to the GARCH-OT approach. The performance of GARCH-Copula
+models is assessed using the six most common static copulas (Gaussian, t, Frank, Gum-
+bel, Clayton, and Joe), and compared with those of the three optimal specifications of the
+GARCH-OT model, calibrated through a novel procedure developed in this study. The
+analysis employs a rolling window framework, estimating VaR at the 95% and 99% con-
+fidence levels for an equally weighted portfolio composed of four European stock indices,
+and the performances are evaluated using the Kupiec test, the Christoffersen test, and the
+Lopez statistic. The results highlight the effectiveness of both approaches for VaR esti-
+mation. In the GARCH-Copula context, models based on elliptical copulas outperform
+Archimedean ones, with the exception of the Clayton copula, whose performance is com-
+parable to that of elliptical models. The GARCH-OT represents a promising alternative,
+yielding comparable results at the 99% level and slightly underestimating risk at the 95%
+level relative to the GARCH-Copula, suggesting significant potential, although requiring
+higher computational cost and accurate calibration.
 
 ## Data Source
 - **Market data**: Daily closing prices for FTSEMIB, DAX40, CAC40, and IBEX35 from January 5, 2015 to April 25, 2025.  
