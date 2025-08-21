@@ -13,7 +13,7 @@ dynamics of the asset returns. The first approach, of parametric nature, relies 
 ula functions (GARCH-Copula approach); the second constitutes the innovative aspect of
 this work, exploiting Optimal Transport theory to model dependence in a non-parametric
 way, thus leading to the GARCH-OT approach. The performance of GARCH-Copula
-models is assessed using the six most common static copulas (Gaussian, t, Frank, Gum-
+models is assessed using the six most common static copulas (Gaussian, t, Frank, Gum
 bel, Clayton, and Joe), and compared with those of the three optimal specifications of the
 GARCH-OT model, calibrated through a novel procedure developed in this study. The
 analysis employs a rolling window framework, estimating VaR at the 95% and 99% con-
